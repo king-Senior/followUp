@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进度查询</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/order.css">
+</head>
+<body>
+
+    <section class="cen-main" id="procesOrd">
+        <img class="progress-img" src="../../images/progressImg.png" alt="">
+
+        <div class="progress-cenve">
+
+            <div class="progress-list" v-for="(prod,index) in prodData">
+                <div class="carrier-row porg-title">
+                    <span class="porg-text" v-text="prod.time"></span>
+                    <span class="porg-text porg-no" v-text="prod.number"></span>
+                    <span class="progress-btn iconfont icon-gengduo icon-fenleiliebiaobiaoji"  :class="{'icon-fenleiliebiaobiaoji':prod.shows}" @click="setToggle(prod,index)"></span>
+                </div>
+                    <div class="carrier-column process-list" :class="{'md-show':prod.delFlag}">
+
+                        <div class="pro-process" v-for="nine in prod.nineprogram">
+
+                            <div class="out-line"></div>
+
+                            <!-- 9道工序 -->
+                            <div class="pro-cenve">
+                                <p class="cess-type" v-text="nine.type"></p>
+                                <p class="cess-attach">
+                                    <span class="cess-time" v-text="nine.time"></span>
+                                    <span class="cess-name">操作员：<span v-text="nine.name">张贤忠</span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+            </div>
+
+
+        </div>
+        <p class="foor-line">没有更多内容</p>
+
+    </section>
+    <script src="../../script/require/require.js" data-main="../../script/progress"></script>
+</body>
+</html>

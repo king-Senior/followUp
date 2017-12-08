@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>热销产品</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/hotsales.css">
+</head>
+<body>
+
+    <header id="navTopHot" class="nav-top">
+
+        <div id="shuffling" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div v-for="imgNames in imgName" class="swiper-slide">
+                    <img :src="imgNames.img" alt="">
+                </div>
+
+            </div>
+
+            <!--<div class="swiper-pagination"></div>-->
+
+        </div>
+
+    </header>
+
+
+    <section class="cen-main">
+
+        <div class="cenv-title">
+            <p class="title-text title-textHot">热销商品</p>
+        </div>
+        <!--产品列表-->
+        <div id="produListHot" class="carrier-list">
+            <div class="carrier-row" v-for="prod in prodData">
+                <div class="img-carrier">
+                    <img :src="prod.img" alt="">
+                </div>
+
+                <div class="tuen-carrier">
+                    <p class="pro-title" v-text="prod.title" ></p>
+                    <p class="pro-text" v-text="prod.text"></p>
+                    <div class="pro-atta">
+                        <p class="pro-sell">月销售：<span class="to-sell" v-text="prod.price"></span></p>
+                        <p class="pro-collect">
+                            <span class="iconfont icon-shoucang" :class="{'icon-shoucang1':prod.collectors,'collectorsRed':prod.collectors}" @click="setOllect(prod)"></span>
+                            <span class="collect-num" v-text="prod.collect"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <p class="foor-line">没有更多内容</p>
+    <script src="../../script/require/require.js" data-main="../../script/hotsales"></script>
+
+</body>
+</html>

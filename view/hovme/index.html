@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品介绍</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/index.css">
+
+</head>
+<body>
+
+    <header id="navTopIn" class="nav-top">
+
+      <div class="top-search">
+          <div class="search">
+              <input type="text" class="search-so" id="searchSo" property="请输入内容">
+              <span class="iconfont icon-sousuo search-sousuo"></span>
+          </div>
+      </div>
+
+      <div id="shuffling" class="swiper-container">
+          <div class="swiper-wrapper">
+              <div v-for="imgNames in imgName" class="swiper-slide">
+                  <img :src="imgNames.img" alt="">
+              </div>
+
+          </div>
+
+            <!--<div class="swiper-pagination"></div>-->
+
+      </div>
+
+    </header>
+
+
+    <section id="cenMain" class="cen-main">
+
+        <div class="cen-menu">
+            <!--<div class="menu-boxlist">-->
+                <!--<span class="iconfont icon-caidan"></span>-->
+                <!--<p class="menu-text">全部</p>-->
+            <!--</div>-->
+
+            <div class="menu-boxlist">
+                <!--<a class="menu-aLink" href="../../test/test.html">-->
+                <span class="iconfont icon-zuixinshangjia1"></span>
+                <p class="menu-text">最新上架</p>
+                <!--</a>-->
+            </div>
+
+            <div class="menu-boxlist">
+                <a class="menu-aLink" href="./hotsales.html">
+                    <span class="iconfont icon-hot"></span>
+                    <p class="menu-text">热销</p>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cenv-title">
+            <p class="title-text">全部商品</p>
+        </div>
+
+        <!--产品列表-->
+        <div id="prodListIn" class="carrier-list column-count">
+            <div class="count-child" v-for="prod in prodData">
+                <div class="carrier-column" >
+                    <div class="img-carrier">
+                        <img :src="prod.img" alt="">
+
+                    </div>
+                    <div class="tuen-carrier">
+                        <p class="pro-title" v-text="prod.title"></p>
+                        <p class="pro-text" v-text="prod.text"></p>
+                        <div class="pro-atta">
+                            <p class="pro-sell">月销售：<span class="to-sell" v-text="prod.price"></span></p>
+                            <p class="pro-collect">
+                                <span class="iconfont icon-shoucang" :class="{'icon-shoucang1':prod.collectors,'collectorsRed':prod.collectors}" @click="setOllect(prod)"></span>
+                                <span class="collect-num" v-text="prod.collect"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <p class="foor-line">没有更多内容</p>
+    <script src="../../script/require/require.js" data-main="../../script/index"></script>
+</body>
+</html>

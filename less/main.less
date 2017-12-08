@@ -1,0 +1,409 @@
+@charset "UTF-8";
+
+@import "artist.1.0.0";
+@import "../css/normalize.css";
+@import "../css/iconfont/iconfont.css";
+@import "../script/swiper/swiper.min.css";
+
+@body-color:#f3f3f3;
+@main-colorj:#c3a35d;
+@main-colorh:#212121;
+@title-color:#666;
+@text-color:#c0bfbf;
+@red-color:#df3535;
+@module-color:#fff;
+@color-999:#999;
+
+//清除a button input去除点击效果以及闪屏问题
+a,
+button,
+input,
+*{
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+body,html           {   .whc(size-c,100%,100%,@body-color);
+                        max-width: 960px;
+                        //min-width: 320px;
+                        margin: 0 auto;
+                        font-size: 100px;
+
+}
+
+body                {   background: @body-color;
+                        font-size:0.1rem;
+                        position: relative;
+}
+
+
+.nav-top            {   width:100%;
+                        position: relative;
+}
+
+
+//黑色渐变
+.top-search {
+
+  position: absolute;
+  top:0;
+  left:0;
+  .color-gradual(up,rgba(0,0,0,.6),rgba(0,0,0,0));
+  z-index: 1;
+  .whc(size-c,100%,0.5rem);
+  .display(flex);
+  .display(ite-center);
+  z-index:2;
+}
+
+//搜索框
+.search {
+
+  .whc(size-c,85%,0.25rem);
+  margin: 0 auto;
+  .display(flex);
+  .display(ite-center);
+  position: relative;
+  .search-so,
+  .search-sousuo {
+
+  }
+  .search-so {
+    .whc(size-c,100%,100%,rgba(255,255,255,.5));
+    .radius(19px);
+    border:none;
+    padding:0 0.3rem;
+
+  }
+
+  .search-sousuo {
+    margin: 0 0.1rem;
+    line-height: 0.25rem;
+    position: absolute;
+    top:0;
+    left:0;
+  }
+}
+
+.swiper-container   {
+  //图片轮播
+
+  .swiper-slide     {   overflow: hidden;
+                        .display(auto);
+
+    img             {   width:100%; }
+
+  }
+
+}
+
+//轮播图
+.swiper-container   {   //.whc(size-c,100%,0,#fff);
+                        //padding-bottom: 1.9rem;
+                        // background: red;
+
+                        width:100%;
+                        height:0;
+                        background: @module-color;
+                        padding-bottom:60%;
+}
+
+//目录标题
+.cenv-title         {   .whc(size-c,100%,auto,@module-color);
+
+  .title-text       {   .font(0.2rem,@main-colorj,center);
+                        line-height: 0.4rem;
+  }
+}
+
+//tab切换
+  .carrier-tab      {   .whc(size-c,100%,auto,#fff);
+                        line-height: 0.4rem;
+                        .display(flex);
+    .tab-cenveChild {
+      .whc(size-c,100%,auto,#fff);
+    }
+
+    .tab-text       {   .flex(1);
+                        .font(0.2rem,@color-999,center);
+                        cursor: pointer;
+
+    }
+
+    .tab-text + .tab-text {
+      position: relative;
+      &:before{
+        content: ".";
+        color: rgba(255,255,255,0);
+        //height:70%;
+        border-left:1px solid @text-color;
+        position: absolute;
+        top:0;
+        left:0;
+        display: block;
+
+      }
+    }
+
+    .tab-active     {   color: @main-colorj;  }
+  }
+
+  .carrier-cenve {
+    .tab-cenveChild {
+      display: none;
+    }
+    .cenve-active {
+      display: block !important;
+    }
+  }
+
+  .carrier-cenve {
+
+  }
+
+
+
+//商品列表 九宫布局
+.carrier-ninearray  {   .whc(size-c,100%,auto);
+                        display: grid;
+                        -webkit-grid-template-columns: repeat(2,1fr);
+                        grid-template-columns: repeat(2,1fr);
+                        //中间 间距
+                        -webkit-grid-gap: 10px;
+                        grid-gap: 10px;
+                        margin-top: 10px;
+}
+
+//竖排
+.carrier-column     {  background: @module-color;
+                       .padd-box(10px);
+                        //margin-top:10px;
+
+  .img-carrier      {  .whc(size-c,100%,1.12rem,@text-color);
+                       overflow: hidden;
+                       .display(auto);
+
+    img             {   width:110%;  }
+
+  }
+
+  .pro-title        {  height:30px;  }
+
+
+}
+
+//多栏布局
+.column-count {   //-webkit-column-count: 2;
+                  //column-count: 2;
+                  .display(flex);
+                  .display(flex-wrap);
+  .count-child {
+    width:100%;
+    -webkit-width:calc(100% / 2);
+    width:calc(100% / 2);
+
+
+    .carrier-column {
+      margin: 5px;
+    }
+
+  }
+}
+
+
+.carrier-list       {   margin-top:10px;
+
+
+//产品标题
+.pro-title          {  .font(0.16rem,@title-color);
+                       line-height: 0.3rem;
+
+                       //单行文本溢出...
+                       //overflow: hidden;
+                       //text-overflow: ellipsis;
+                       //white-space: nowrap;
+
+                        //多行文本溢出...
+                        display:-webkit-box;
+                        -webkit-box-orient:vertical;
+                        -webkit-line-clamp:1;
+                        overflow: hidden;
+}
+//产品功能数据
+.pro-atta            {  .font(12px,@main-colorj);
+                        .display(flex);
+                        .display(j-end);
+                        .display(ite-cen);
+
+  .pro-collect       {  margin-left:12px;
+                        .display(flex);
+                        .display(ite-cen);
+                        //line-height: 18px;
+
+                        margin-left: 5px;
+
+    span             {  display: inline-block;  }
+
+  .iconfont          {  height: 100%;.display(ite-center);
+
+  }
+
+  }
+  .pro-jus           {  width:100%;
+                        .display(j-between);
+                        margin: 0 !important;
+  }
+  .pro-collect       {  margin-left: 10px;  }
+  .collect-num       {  margin-left:10px; }
+
+  .transact-date     {  color: @text-color !important;  }
+
+
+
+}
+  .pro-type          {  .display(flex);
+                        .font(0.12,@text-color,left);
+    .pro-num         {  margin-left:10px; }
+  }
+
+//产品文本
+.pro-text            {  .font(0.1rem,@color-999,left);
+                        line-height: 0.18rem;
+                        margin:4px 0;
+                        text-align: justify;
+                        height: 38px;
+
+                        //文本溢出...
+                        display:-webkit-box;
+                        -webkit-box-orient:vertical;
+                        -webkit-line-clamp:2;
+                        overflow: hidden;
+
+}
+
+
+
+.tuen-carrier        {  .flex(1);
+                        .display(column);
+                        .display(j-around);
+
+}
+
+.carrier-row         {
+  .tuen-carrier      {  .padd-box(0 0 0 10px);  }
+}
+
+
+
+}
+//横排
+.carrier-row         {  background: @module-color !important;
+                        .display(flex);
+                        .whc(size-c,100%,1.2rem);
+                        .padd-box(10px);
+                        margin-top: 10px;
+
+  .img-carrier       {  .whc(size-c,140px,100%,@text-color);
+                        overflow: hidden;
+                        .display(auto);
+    img              {   height:110%;  }
+
+  }
+}
+
+
+//表单模块
+.form-module         {    margin-top:10px;
+  .form-cenve        {    .whc(size-c,100%,auto,@module-color);
+                          .padd-box(10px);
+                          .display(flex);
+                          margin-top:4px;
+
+    .form-title      {    .font(0.1rem,@text-color,left);
+                          .display(ite-end);
+    }
+    .form-text       {   .font(0.16rem,@title-color);
+                          padding:0 0.4rem;
+    }
+  }
+
+
+}
+
+//收藏
+.collectorsRed {
+  color: red ;
+}
+
+
+.btn-enquiries       {   margin:10px auto;
+                         .remove-btn();
+                         line-height: 0.3rem;
+                         color: #fff;
+                         .whc(size-c,98%,auto,@main-colorj);
+                         border-radius: 4px;
+                         display: block;
+
+}
+@media screen and(min-width: 760px) {
+
+  //商品列表
+  .carrier-ninearray {  -webkit-grid-template-columns: repeat(3,1fr);
+                        grid-template-columns: repeat(3,1fr);
+
+  }
+
+  //多栏布局
+  .column-count {
+    .count-child {
+      -webkit-width:calc(100% / 3);
+      width:calc(100% / 3);
+    }
+  }
+
+}
+@media screen and(max-width: 320px) {
+
+
+  //多栏布局
+  .column-count {   //-webkit-column-count: 2;
+    .count-child {
+      -webkit-width:calc(100% / 1);
+      width:calc(100% / 1);
+
+    }
+  }
+
+}
+
+
+
+//底线
+.foor-line           {  .whc(size-c,100%,auto);
+                        .font(0.1rem,@text-color,center);
+                        line-height: 0.5rem;
+                        .padd-box(0 10px);
+
+                        .display(ite-center);
+                        .display(j-between);
+
+  &:before,
+  &:after           {   content: ' ';
+                        .whc(size-c,35%,1px,@text-color);
+                        display: block;
+                        flex:1;
+  }
+&:before            {    margin-right:10px; }
+
+  &:after           {    margin-left:10px;  }
+
+}
+
+
+
+//样式绑定
+.md-show {
+  display: none;
+}
+
+
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>历史定单</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/order.css">
+</head>
+<body>
+
+
+
+
+
+<section class="cen-main tab-switch">
+
+    <ul class="carrier-tab">
+        <li class="tab-text tab-active">全部</li>
+        <li class="tab-text">日期查询</li>
+    </ul>
+
+    <div class="carrier-cenve">
+
+        <div class="tab-cenveChild cenve-active">
+            <a href="./ordernumber.html" class="menu-aLink">
+            <div class="search history-search">
+                <div type="text" class="search-so">
+                    <span class="iconfont icon-sousuo search-hsousuo"></span>
+                    <p class="search-hsousuo-text">输入订单号查询</p>
+                </div>
+
+            </div>
+            </a>
+
+            <!--历史订单all列表-->
+            <div id="produListHiscAll" class="carrier-list">
+
+                <div class="carrier-row" v-for="prod in prodData">
+                    <div class="img-carrier">
+                        <img :src="prod.img" alt="">
+                    </div>
+
+                    <div class="tuen-carrier">
+                        <p class="pro-title" v-text="prod.title"></p>
+                        <div class="pro-type">
+                            <p class="pro-color">颜色： <span v-text="prod.color"></span></p>
+                            <p class="pro-num">数量： <span v-text="prod.num"></span></p>
+                        </div>
+                        <div class="pro-atta">
+                            <p class="pro-collect pro-jus">
+                                <span class="transact-state" v-text="prod.transact"></span>
+                                <span class="transact-date" v-text="prod.time"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-cenveChild">
+
+            <div class="form-module">
+
+                <div class="form-cenve">
+                    <p class="form-title started-date">起始日期</p>
+                    <span class="form-text sta-time">2017-10-25</span>
+                </div>
+
+                <div class="form-cenve">
+                    <p class="form-title started-date">结束日期</p>
+                    <span class="form-text end-time">2017-10-26</span>
+                </div>
+
+                <button id="btnEnquiries" class="btn-enquiries">查询</button>
+
+            </div>
+
+
+
+            <!--历史订单all列表-->
+            <div id="produListHisDate" class="carrier-list" style="display: none;">
+                <div class="carrier-row"  v-for="prod in prodData">
+                    <div class="img-carrier">
+                        <img :src="prod.img" alt="">
+                    </div>
+
+                    <div class="tuen-carrier">
+                        <p class="pro-title" v-text="prod.title"></p>
+                        <div class="pro-type">
+                            <p class="pro-color">颜色： <span v-text="prod.color"></span></p>
+                            <p class="pro-num">数量： <span v-text="prod.num"></span></p>
+                        </div>
+                        <div class="pro-atta">
+                            <p class="pro-collect pro-jus">
+                                <span class="transact-state" v-text="prod.transact"></span>
+                                <span class="transact-date" v-text="prod.time"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<p class="foor-line">没有更多内容</p>
+<script src="../../script/require/require.js" data-main="../../script/order"></script>
+</body>
+</html>
