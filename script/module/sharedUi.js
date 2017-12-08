@@ -3,6 +3,7 @@ define('sharedUi',['zepto'],function () {
     return {
         
         setSharedUi:function (parent,img) {
+            //切换图片大小等比例绽放
 
             var parentHeight = $(parent).offset().height;
             var imgHeight = $(img);
@@ -11,6 +12,7 @@ define('sharedUi',['zepto'],function () {
 
         },
         setTab:function (tabSwitch) {
+            //tab切换
 
             var tabLi = $(tabSwitch).find("ul.carrier-tab li");
             var tabCenve = $(tabSwitch).find(".carrier-cenve .tab-cenveChild");
@@ -26,11 +28,31 @@ define('sharedUi',['zepto'],function () {
 
         },
         setLayout:function (element,column) {
+            //多列面部局尺寸
 
             var browserW = parseInt($(document.body).width() / column);
             $(element).css('width',browserW + 'px');
 
             return browserW;
+        },
+        setLocalizeNav:function (search) {
+            //固定导航
+
+            // 滚动条事件之前文档滚动高度
+            var scrollTop = (document.documentElement.scrollTop || document.body.scrollTop);
+
+            var objName = $(search);
+
+            window.onscroll = function () {
+                console.log(scrollTop);
+                if(scrollTop != (document.documentElement.scrollTop || document.body.scrollTop)){
+                    scrollTop = (document.documentElement.scrollTop || document.body.scrollTop);
+                    objName.css('top',scrollTop + 'px');
+                }
+
+            }
+
+
         }
     }
     

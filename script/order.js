@@ -12,6 +12,7 @@ requirejs.config({
 require(['zepto','sharedUi','orderMod'],function ($,data,order) {
 
     data.setTab(".tab-switch");
+
     order.setDataAllAip();
 
     $("#btnEnquiries").on('click',function () {
