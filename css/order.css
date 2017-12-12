@@ -285,6 +285,10 @@
  *
  **/
 /**
+ *   placeholder样式
+ *
+ **/
+/**
  *   阴影
  *
  *   @shadow 值
@@ -432,4 +436,24 @@
   top: 0;
   right: 0;
   margin: 0 auto;
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-size: 0.15rem;
+  color: #999999;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-size: 0.15rem;
+  color: #999999;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-size: 0.15rem;
+  color: #999999;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  font-size: 0.15rem;
+  color: #999999;
 }

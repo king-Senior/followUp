@@ -13,14 +13,44 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5168472">
+    <splitter split-orientation="horizontal" split-proportion="0.62454873">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="hotsales.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/hovme/hotsales.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="379">
-                  <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+                <state relative-caret-position="151">
+                  <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="contactus.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/aboutus/contactus.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="190">
+                  <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="culture.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/aboutus/culture.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="171">
+                  <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="progress.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/order/progress.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="209">
+                  <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -29,18 +59,18 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/hovme/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+                <state relative-caret-position="228">
+                  <caret line="12" column="58" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="58" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ordernumber.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="ordernumber.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/view/searchlist/ordernumber.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="133">
-                  <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+                <state relative-caret-position="285">
+                  <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -58,11 +88,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="historyorder.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="historyorder.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/order/historyorder.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="228">
-                  <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+                <state relative-caret-position="190">
+                  <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -92,11 +122,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="order.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="order.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/script/order.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="304">
-                  <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+                <state relative-caret-position="247">
+                  <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -105,18 +135,18 @@
           <file leaf-file-name="order.less" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/less/order.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="184">
-                  <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+                <state relative-caret-position="400">
+                  <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.less" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.less" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/less/index.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="551">
-                  <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+                <state relative-caret-position="304">
+                  <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -125,8 +155,8 @@
           <file leaf-file-name="main.less" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/less/main.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="514">
-                  <caret line="496" column="20" lean-forward="true" selection-start-line="496" selection-start-column="20" selection-end-line="496" selection-end-column="20" />
+                <state relative-caret-position="266">
+                  <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -190,10 +220,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>carrier-tab</find>
-      <find>pro-process</find>
-      <find>produListHisAll</find>
-      <find>menu-boxlist</find>
       <find>cess-type</find>
       <find>pro-cenve</find>
       <find>pro-atta</find>
@@ -218,7 +244,11 @@
       <find>99%</find>
       <find>search-list</find>
       <find>search-sousuo-right</find>
+      <find>.search</find>
+      <find>menu-aLink</find>
       <find>btn</find>
+      <find>search-so</find>
+      <find>top-searchblack</find>
       <find>form-text</find>
     </findStrings>
   </component>
@@ -241,32 +271,32 @@
         <option value="$PROJECT_DIR$/script/module/orderMod.js" />
         <option value="$PROJECT_DIR$/script/progress.js" />
         <option value="$PROJECT_DIR$/simulateData/processList.json" />
-        <option value="$PROJECT_DIR$/view/aboutus/contactus.html" />
         <option value="$PROJECT_DIR$/less/artist.less" />
-        <option value="$PROJECT_DIR$/view/aboutus/culture.html" />
         <option value="$PROJECT_DIR$/less/culture.less" />
         <option value="$PROJECT_DIR$/test/test.html" />
         <option value="$PROJECT_DIR$/simulateData/orderHistoryAll.json" />
         <option value="$PROJECT_DIR$/simulateData/products-list.json" />
         <option value="$PROJECT_DIR$/script/module/indexMod.js" />
         <option value="$PROJECT_DIR$/script/module/hotsalesMod.js" />
-        <option value="$PROJECT_DIR$/view/hovme/hotsales.html" />
-        <option value="$PROJECT_DIR$/view/order/progress.html" />
         <option value="$PROJECT_DIR$/script/module/progressMod.js" />
-        <option value="$PROJECT_DIR$/less/index.less" />
         <option value="$PROJECT_DIR$/view/order/ordernumber.html" />
         <option value="$PROJECT_DIR$/script/hotsales.js" />
-        <option value="$PROJECT_DIR$/less/order.less" />
         <option value="$PROJECT_DIR$/test/gudin_tab.html" />
         <option value="$PROJECT_DIR$/script/index.js" />
-        <option value="$PROJECT_DIR$/view/hovme/index.html" />
         <option value="$PROJECT_DIR$/script/return.js" />
         <option value="$PROJECT_DIR$/script/module/sharedUi.js" />
-        <option value="$PROJECT_DIR$/view/searchlist/ordernumber.html" />
         <option value="$PROJECT_DIR$/less/artist.1.0.0.less" />
-        <option value="$PROJECT_DIR$/less/main.less" />
-        <option value="$PROJECT_DIR$/view/order/historyorder.html" />
         <option value="$PROJECT_DIR$/script/order.js" />
+        <option value="$PROJECT_DIR$/less/main.less" />
+        <option value="$PROJECT_DIR$/less/order.less" />
+        <option value="$PROJECT_DIR$/less/index.less" />
+        <option value="$PROJECT_DIR$/view/hovme/index.html" />
+        <option value="$PROJECT_DIR$/view/hovme/hotsales.html" />
+        <option value="$PROJECT_DIR$/view/aboutus/contactus.html" />
+        <option value="$PROJECT_DIR$/view/aboutus/culture.html" />
+        <option value="$PROJECT_DIR$/view/order/historyorder.html" />
+        <option value="$PROJECT_DIR$/view/order/progress.html" />
+        <option value="$PROJECT_DIR$/view/searchlist/ordernumber.html" />
       </list>
     </option>
   </component>
@@ -276,7 +306,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="214" />
     <option name="y" value="94" />
     <option name="width" value="1400" />
@@ -343,6 +373,12 @@
               <item name="followUp" type="b2602c69:ProjectViewProjectNode" />
               <item name="followUp" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="followUp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="followUp" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="aboutus" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="followUp" type="b2602c69:ProjectViewProjectNode" />
@@ -427,15 +463,15 @@
       <workItem from="1512974022751" duration="5533000" />
       <workItem from="1512999855392" duration="156000" />
       <workItem from="1513042588049" duration="625000" />
-      <workItem from="1513046325392" duration="15224000" />
+      <workItem from="1513046325392" duration="19666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192555000" />
+    <option name="totallyTimeSpent" value="196997000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12434141" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -477,13 +513,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/simulateData/products-list.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simulateData/shuffling.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -584,24 +613,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/aboutus/contactus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/less/culture.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/aboutus/culture.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -680,14 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/order/progress.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/iconfont/demo_fontclass.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -720,14 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/hovme/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/module/LCalendar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -740,14 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/hovme/hotsales.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -768,24 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/searchlist/ordernumber.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/order.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/less/artist.1.0.0.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -793,6 +766,30 @@
           <folding>
             <element signature="e#5702#5758#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/order.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/order.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -806,33 +803,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/less/main.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="496" column="20" lean-forward="true" selection-start-line="496" selection-start-column="20" selection-end-line="496" selection-end-column="20" />
+        <state relative-caret-position="266">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/less/index.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+        <state relative-caret-position="304">
+          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/order.js">
+    <entry file="file://$PROJECT_DIR$/view/hovme/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        <state relative-caret-position="228">
+          <caret line="12" column="58" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/hovme/hotsales.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/aboutus/contactus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/aboutus/culture.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/order/historyorder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        <state relative-caret-position="190">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/order/progress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/searchlist/ordernumber.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
