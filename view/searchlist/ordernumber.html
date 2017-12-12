@@ -5,34 +5,42 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <title>历史定单</title>
     <link rel="stylesheet" href="../../css/main.css">
-    <link rel="stylesheet" href="../../css/order.css">
 </head>
 <body>
-
-
-
-
-
 <section class="cen-main tab-switch">
 
-    <div class="top-search">
-        <div class="search ordenumber-search">
-            <input type="text" class="search-so" id="searchSo" value="请输入内容">
-            <span class="iconfont icon-sousuo search-sousuo"></span>
-        </div>
-    </div>
+    <div class="top-search" style="position: relative;">
+        <div class="search search-list">
+            <span class="iconfont icon-fanhui search-return" id="returnPage"></span>
+            <div class="search menu-aLink">
+                <input type="text" maxlength="20" class="search-so" id="searchSo" placeholder="请输入内容">
+                <span class="iconfont icon-guanbi-copy search-colse-right" id="removeText"></span>
+                <span class="iconfont icon-sousuo search-sousuo-right"></span>
+            </div>
 
+        </div>
+
+        <!--<div class="search ">-->
+            <!--<a href="../searchlist/ordernumber.html" class="search menu-aLink">-->
+                <!--<div class="search-so">-->
+                    <!--<span class="iconfont icon-sousuo search-hsousuo"></span>-->
+                    <!--<p class="search-hsousuo-text">输入订单号查询</p>-->
+                <!--</div>-->
+            <!--</a>-->
+            <!--<div class="scrllTop-color"></div>-->
+        <!--</div>-->
+        <!--滚动一定的距离出现底色-->
+
+    </div>
 
     <div class="carrier-cenve">
 
             <!--历史订单all列表-->
             <!--<div id="produListHiscAll" class="carrier-list">-->
-
                 <!--<div class="carrier-row" v-for="prod in prodData">-->
                     <!--<div class="img-carrier">-->
                         <!--<img :src="prod.img" alt="">-->
                     <!--</div>-->
-
                     <!--<div class="tuen-carrier">-->
                         <!--<p class="pro-title" v-text="prod.title"></p>-->
                         <!--<div class="pro-type">-->
@@ -53,5 +61,7 @@
 
 </section>
 <p class="foor-line">没有更多内容</p>
+<script src="../../script/require/require.js" data-main="../../script/return"></script>
+
 </body>
 </html>

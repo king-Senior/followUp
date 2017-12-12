@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-    <title>历史定单</title>
+    <title>历史订单</title>
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/order.css">
+    <link rel="stylesheet" href="../../css/LCalendar.css">
+
 </head>
 <body>
 
@@ -29,7 +31,7 @@
 
 
                 <div class="search">
-                    <a href="./ordernumber.html" class="search menu-aLink">
+                    <a href="../searchlist/ordernumber.html" class="search menu-aLink">
                         <div class="search-so">
                             <span class="iconfont icon-sousuo search-hsousuo"></span>
                             <p class="search-hsousuo-text">输入订单号查询</p>
@@ -71,12 +73,12 @@
 
                 <div class="form-cenve">
                     <p class="form-title started-date">起始日期</p>
-                    <span class="form-text sta-time">2017-10-25</span>
+                    <input class="form-text sta-time" id="staTime" placeholder="请选择起始日期" />
                 </div>
 
                 <div class="form-cenve">
                     <p class="form-title started-date">结束日期</p>
-                    <span class="form-text end-time">2017-10-26</span>
+                    <input class="form-text end-time"  id="endTime" placeholder="请选择结束日期"/>
                 </div>
 
                 <button id="btnEnquiries" class="btn-enquiries">查询</button>

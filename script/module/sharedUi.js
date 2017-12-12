@@ -36,22 +36,47 @@ define('sharedUi',['zepto'],function () {
             return browserW;
         },
         setLocalizeNav:function (search) {
-            //固定导航
+            //滚动添加透明度
 
-            // 滚动条事件之前文档滚动高度
-            var scrollTop = (document.documentElement.scrollTop || document.body.scrollTop);
-
-            var objName = $(search);
-
+            var scrollTop = 0;
+            var opacity;
             window.onscroll = function () {
-                console.log(scrollTop);
-                if(scrollTop != (document.documentElement.scrollTop || document.body.scrollTop)){
-                    scrollTop = (document.documentElement.scrollTop || document.body.scrollTop);
-                    objName.css('top',scrollTop + 'px');
-                }
+
+                var objName = $(search);
+
+                // 获取滚动距离
+                scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                opacity =scrollTop/400;
+                objName.css('opacity',opacity);
+
 
             }
 
+        },
+        setReturnPage:function (name) {
+            //返回
+
+            $(name).on('click',function () {
+                window.history.back();
+            })
+        },
+        setEditShowClose:function (name,nameBtn) {
+            //搜索框 、清空
+
+            var nameText = $(name);
+            var nameBnt = $(nameBtn);
+
+            nameText.on('input',function () {
+
+               nameText.val().length > 0 ? nameBnt.show() : nameBnt.hide();
+
+            });
+
+            nameBnt.on('click',function () {
+                $(this).hide();
+                nameText.val('');
+                nameText.focus();
+            })
 
         }
     }

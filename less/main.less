@@ -13,13 +13,19 @@
 @red-color:#df3535;
 @module-color:#fff;
 @color-999:#999;
+@transparence:transparence;
 
 //清除a button input去除点击效果以及闪屏问题
 a,
 button,
 input,
 *{
-  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  //去除移动端默认点击效果
+  //-webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  -webkit-tap-highligh-color: transparence;
+
+  //清除移动端默认表单样式
+  -webkit-appearance: none;
 }
 
 body,html           {   .whc(size-c,100%,100%,@body-color);
@@ -42,27 +48,32 @@ body                {   background: @body-color;
 
 
 //黑色渐变
-.top-search         {   position: absolute;
+.top-search         {   position: fixed;
                         top:0;
                         left:0;
                         .color-gradual(up,rgba(0,0,0,.6),rgba(0,0,0,0));
-                        z-index: 1;
+                        z-index: 2;
                         .whc(size-c,100%,0.5rem);
                         .display(flex);
                         .display(ite-center);
-                        z-index:2;
 }
 
-
+.search {
+  .menu-aLink {
+    height:0.3rem;
+  }
+}
 .menu-aLink         {   color: #666;  }
 
 //搜索框
-.search             {   .whc(size-c,99%,0.3rem);
+.search             {
+                        .whc(size-c,99%,100%,@transparence);
+                        max-width: 960px;
                         margin: 0 auto;
                         .display(flex);
                         .display(ite-center);
                         position: relative;
-                        .search-so,
+                        z-index:3;
 
   .search-so        {   .whc(size-c,100%,100%,rgba(255,255,255,.5));
                         .radius(19px);
@@ -76,9 +87,58 @@ body                {   background: @body-color;
                         position: absolute;
                         top:0;
                         left:0;
+
   }
 
-  //架子
+}
+
+
+.top-search > .search-list {
+  .padd-box(0 5px);
+  background: #fff;
+  width:100%;
+
+  .search-so {
+    background: @body-color;
+    //text-indent:25px;
+  }
+
+  .search-return {
+    .font(0.25rem,@text-color,center);
+  }
+
+  .search-sousuo-right {
+    position: absolute;
+    right:10px;
+  }
+  .search-colse-right {
+    position: absolute;
+    right:40px;
+    border-right:1px solid @text-color;
+    color: @text-color;
+    padding:0 10px;
+    opacity: .6;
+    display: none;
+  }
+
+
+}
+
+//滚动一定的距离出现底色
+.scrllTop-color   {   .whc(size-c,100%,100%,@body-color);
+                      position: absolute;
+                      top: 0;
+                      left:0;
+                      opacity:0;
+
+
+  &:after {           content:'';
+                      display: block;
+                      .box(shadow,0 0 20px rgba(0,0,0,.5));
+                      .whc(size-c,100%,100%,transparence);
+                      margin: 0 auto
+  ;
+  }
 
 }
 .menu-aLink         {
@@ -114,6 +174,7 @@ body                {   background: @body-color;
   }
 
 }
+
 
 //轮播图
 .swiper-container   {   //.whc(size-c,100%,0,#fff);
@@ -342,7 +403,9 @@ body                {   background: @body-color;
     }
     .form-text       {   .font(0.16rem,@title-color);
                           padding:0 0.4rem;
+                          .remove-btn();
     }
+
   }
 
 
@@ -424,5 +487,25 @@ body                {   background: @body-color;
   display: none;
 }
 
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  font-size:0.15rem;
+  color: @color-999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  font-size:0.15rem;
+  color: @color-999;
+
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  font-size:0.15rem;
+  color: @color-999;
+
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  font-size:0.15rem;
+  color: @color-999;
+
+}
 
 

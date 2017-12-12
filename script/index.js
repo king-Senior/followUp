@@ -17,11 +17,11 @@ require(['zepto','indexMod','sharedUi'],function ($,indes,sharedUis) {
     sharedUis.setSharedUi(".swiper-container",".swiper-wrapper");
 
     //固定顶底
-    sharedUis.setLocalizeNav(".top-search");
+    sharedUis.setLocalizeNav(".scrllTop-color");
     window.onresize = function () {
 
 
-        sharedUis.setLocalizeNav(".top-search");
+        //sharedUis.setLocalizeNav(".top-search");
     }
 
 
