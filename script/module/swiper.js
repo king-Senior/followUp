@@ -1,5 +1,5 @@
 define('swiper-def',['swiper'],function (mySwiper) {
-
+    //swiper滚动
 
     return {
         setSwiper:function () {

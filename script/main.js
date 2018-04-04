@@ -1,0 +1,20 @@
+require.config({
+
+    baseUrl:'../../script',
+    paths:{
+        'zepto':'./zepto.min',
+        'vue':'./vue/vue',
+        'swiper':'./swiper/swiper.min',
+        'LCalendar':'./module/LCalendar',
+        'api_config':'./module/api_config',
+        'sharedUi':'./module/sharedUi',
+        'swiper-def':'./module/swiper',
+        'indexMod':'./module/indexMod',
+        'hotsalesMod':'./module/hotsalesMod',
+        'orderMod':'./module/orderMod',
+        'progressMod':'./module/progressMod',
+        'dateFormat':'./module/dateFormat',
+        'aboutusMod':'./module/aboutusMod',
+        'weixinUser':'./module/weixinUser'
+    }
+});

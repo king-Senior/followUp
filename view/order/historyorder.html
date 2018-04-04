@@ -15,12 +15,13 @@
     <link rel="stylesheet" href="../../css/LCalendar.css">
 
 </head>
-<body>
+<body ontouchstart>
 
-<section class="cen-main tab-switch">
+<section class="cen-main tab-switch"  id="orderUSer"  data-user="">
+
 
     <ul class="carrier-tab">
-        <li class="tab-text tab-active">全部</li>
+        <li class="tab-text tab-active" id="orderAdd">全部</li>
         <li class="tab-text">日期查询</li>
     </ul>
 
@@ -37,38 +38,102 @@
 
 
                 <div class="search">
-                    <a href="../searchlist/ordernumber.html" class="search menu-aLink">
-                        <div class="search-so">
+                    <a href="javascript:void(0)" class="search menu-aLink">
+                        <div id="j-searchSo" class="search-so">
                             <span class="iconfont icon-sousuo search-hsousuo"></span>
                             <p class="search-hsousuo-text">输入订单号查询</p>
                         </div>
                     </a>
                 </div>
 
-            </div>
 
+
+            </div>
+            <!--<iframe  id="iframe1" name="myFramec" src="../../view/searchlist/ordernumber.html"></iframe>-->
             <!--历史订单all列表-->
             <div id="produListHiscAll" class="carrier-list">
+                <!--./progress.html-->
+                <a href="javascript:void(0)" @click="orderPocessInfo(index)" v-for="(prod,index) in prodData">
+                    <div class="carrier-row" >
+                        <ul class="order-list">
 
-                <div class="carrier-row" v-for="prod in prodData">
-                    <div class="img-carrier">
-                        <img :src="prod.img" alt="">
-                    </div>
+                            <li class="list-order order-no">
+                                <p class="text-list">
+                                    <span class="text-centen">订单号：<span class="text-info" v-text="prod.lsh"></span></span>
+                                    <span class="text-centen">客户名称：<span class="text-info" v-text="prod.khmc"></span></span>
+                                </p>
 
-                    <div class="tuen-carrier">
-                        <p class="pro-title" v-text="prod.title"></p>
-                        <div class="pro-type">
-                            <p class="pro-color">颜色： <span v-text="prod.color"></span></p>
-                            <p class="pro-num">数量： <span v-text="prod.num"></span></p>
-                        </div>
-                        <div class="pro-atta">
-                            <p class="pro-collect pro-jus">
-                                <span class="transact-state" v-text="prod.transact"></span>
-                                <span class="transact-date" v-text="prod.time"></span>
-                            </p>
-                        </div>
+                                <p class="text-list">
+                                    <span class="text-centen">终端客户地址：<span class="text-info" v-text="prod.fhdz"></span></span>
+                                </p>
+                            </li>
+
+                            <!--<li class="list-order">-->
+                            <!--<p class="text-list">-->
+
+
+                            <!--</p>-->
+
+                            <!--<p class="text-list">-->
+
+                            <!--</p>-->
+
+
+                            <!--</li>-->
+
+                            <li class="list-order">
+                                <p class="text-list">
+                                    <span class="text-centen">接单日期：<span class="text-info">{{prod.jdrq | formatDate}}</span></span>
+                                    <span class="text-centen">客户类型：<span class="text-info" v-text="prod.khlx"></span></span>
+
+                                </p>
+
+                                <p class="text-list">
+
+                                    <span class="text-centen">数量：<span class="text-info" v-text="prod.sl"></span></span>
+                                    <span class="text-centen">合计金额：<span class="text-info" v-text="prod.zje"></span></span>
+                                </p>
+
+
+
+                            </li>
+
+                            <li class="list-order">
+
+                                <p class="text-list">
+                                    <span class="text-centen">到款银行：<span class="text-info" v-text="prod.dkyh"></span></span>
+                                    <span class="text-centen">到款金额：<span class="text-info" v-text="prod.dkje"></span></span>
+
+                                </p>
+                                <!--<p class="text-list">-->
+                                    <!--<span class="text-centen">财务审核日期：<span class="text-info" >{{prod.cwshrq | formatDate}}</span></span>-->
+
+                                <!--</p>-->
+
+
+                            </li>
+
+                            <li class="list-order">
+                                <p class="text-list">
+
+                                    <span class="text-centen">财务到款日期：<span class="text-info" >{{prod.cwdkrq | formatDate}}</span></span>
+                                    <span class="text-centen">审核日期：<span class="text-info" >{{prod.ddshrq | formatDate}}</span></span>
+                                </p>
+                                <p class="text-list">
+
+
+                                    <!--<span class="text-centen">生产审核日期：<span class="text-info">{{prod.scshrq | formatDate}}</span></span>-->
+                                    <!--<span class="text-centen">审核状态：<span class="text-info" v-text="prod.checkFlag"></span></span>-->
+                                </p>
+
+
+                            </li>
+
+
+
+                        </ul>
                     </div>
-                </div>
+                </a>
             </div>
 
         </div>
@@ -76,45 +141,104 @@
         <div class="tab-cenveChild">
 
             <div class="form-module">
+                <form action="javascript:void(0)">
+                    <div class="form-cenve">
+                        <p class="form-title started-date">起始日期</p>
+                        <input class="form-text sta-time" type="search" readonly id="staTime" placeholder="请选择起始日期" />
+                    </div>
 
-                <div class="form-cenve">
-                    <p class="form-title started-date">起始日期</p>
-                    <input class="form-text sta-time" id="staTime" placeholder="请选择起始日期" />
-                </div>
+                    <div class="form-cenve">
+                        <p class="form-title started-date">结束日期</p>
+                        <input class="form-text end-time" type="search" readonly  id="endTime" placeholder="请选择结束日期"/>
+                    </div>
 
-                <div class="form-cenve">
-                    <p class="form-title started-date">结束日期</p>
-                    <input class="form-text end-time"  id="endTime" placeholder="请选择结束日期"/>
-                </div>
-
-                <button id="btnEnquiries" class="btn-enquiries">查询</button>
-
+                    <button id="btnEnquiries" class="btn-enquiries" >查询</button>
+                </form>
             </div>
 
+            <!--历史订单-范围列表-->
+            <div id="produListHisDate" class="carrier-list"  >
+                <a href="javascript:void(0)" @click="orderPocessInfo(index)" v-for="(prod,index) in prodData">
+                    <div class="carrier-row" >
+                        <ul class="order-list">
+
+                            <li class="list-order order-no">
+                                <p class="text-list">
+                                    <span class="text-centen">订单号：<span class="text-info" v-text="prod.lsh"></span></span>
+                                    <span class="text-centen">客户名称：<span class="text-info" v-text="prod.khmc"></span></span>
+                                </p>
+
+                                <p class="text-list">
+                                    <span class="text-centen">终端客户地址：<span class="text-info" v-text="prod.fhdz"></span></span>
+                                </p>
+                            </li>
+
+                            <!--<li class="list-order">-->
+                                <!--<p class="text-list">-->
 
 
-            <!--历史订单all列表-->
-            <div id="produListHisDate" class="carrier-list" style="display: none;">
-                <div class="carrier-row"  v-for="prod in prodData">
-                    <div class="img-carrier">
-                        <img :src="prod.img" alt="">
+                                <!--</p>-->
+
+                                <!--<p class="text-list">-->
+
+                                <!--</p>-->
+
+
+                            <!--</li>-->
+
+                            <li class="list-order">
+                                <p class="text-list">
+                                    <span class="text-centen">接单日期：<span class="text-info">{{prod.jdrq | formatDate}}</span></span>
+                                    <span class="text-centen">客户类型：<span class="text-info" v-text="prod.khlx"></span></span>
+
+                                </p>
+
+                                <p class="text-list">
+
+                                    <span class="text-centen">数量：<span class="text-info" v-text="prod.sl"></span></span>
+                                    <span class="text-centen">合计金额：<span class="text-info" v-text="prod.zje"></span></span>
+                                </p>
+
+
+
+                            </li>
+
+                            <li class="list-order">
+
+                                <p class="text-list">
+                                    <span class="text-centen">到款银行：<span class="text-info" v-text="prod.dkyh"></span></span>
+                                    <span class="text-centen">到款金额：<span class="text-info" v-text="prod.dkje"></span></span>
+
+                                </p>
+                                <!--<p class="text-list">-->
+                                    <!--<span class="text-centen">财务审核日期：<span class="text-info" >{{prod.cwshrq | formatDate}}</span></span>-->
+
+                                <!--</p>-->
+
+
+                            </li>
+
+                            <li class="list-order">
+                                <p class="text-list">
+
+                                    <span class="text-centen">财务到款日期：<span class="text-info" >{{prod.cwdkrq | formatDate}}</span></span>
+                                    <span class="text-centen">审核日期：<span class="text-info" >{{prod.ddshrq | formatDate}}</span></span>
+                                </p>
+                                <p class="text-list">
+
+
+                                    <!--<span class="text-centen">生产审核日期：<span class="text-info">{{prod.scshrq | formatDate}}</span></span>-->
+                                    <!--<span class="text-centen">审核状态：<span class="text-info" v-text="prod.checkFlag"></span></span>-->
+                                </p>
+
+
+                            </li>
+
+
+
+                        </ul>
                     </div>
-
-                    <div class="tuen-carrier">
-                        <p class="pro-title" v-text="prod.title"></p>
-                        <div class="pro-type">
-                            <p class="pro-color">颜色： <span v-text="prod.color"></span></p>
-                            <p class="pro-num">数量： <span v-text="prod.num"></span></p>
-                        </div>
-                        <div class="pro-atta">
-                            <p class="pro-collect pro-jus">
-                                <span class="transact-state" v-text="prod.transact"></span>
-                                <span class="transact-date" v-text="prod.time"></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+                </a>
             </div>
 
         </div>
@@ -122,7 +246,143 @@
     </div>
 
 </section>
+
+
+<!--搜索-->
+<div class="centent" id="ddataWeixOrder" style="display: none;">
+    <section class="cen-main tab-switch" >
+
+        <div class="top-search" style="position: relative;">
+            <div class="search search-list">
+                <span class="iconfont icon-fanhui search-return" id="returnPage" @click="setReurn"></span>
+                <div class="search menu-aLink">
+                    <form class="search search-list">
+                        <input type="search" maxlength="20" class="search-so" id="searchSo" placeholder="请输入内容">
+                        <!--清除-->
+                        <span class="iconfont icon-guanbi-copy search-colse-right" id="removeText"></span>
+                    </form>
+
+                    <!--搜索-->
+                    <span class="iconfont icon-sousuo search-sousuo-right" id="searchOrder" @click="setSearch"></span>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <div class="carrier-cenve">
+
+        <!--历史订单all列表-->
+        <a href="javascript:void(0)" @click="orderPocessInfo(index)" v-for="(prod,index) in prodData" class="datWeixList" >
+            <div class="carrier-row" >
+                <ul class="order-list">
+
+                    <li class="list-order order-no">
+                        <p class="text-list">
+                            <span class="text-centen">订单号：<span class="text-info" v-text="prod.lsh"></span></span>
+                            <span class="text-centen">客户名称：<span class="text-info" v-text="prod.khmc"></span></span>
+                        </p>
+
+                        <p class="text-list">
+                            <span class="text-centen">终端客户地址：<span class="text-info" v-text="prod.fhdz"></span></span>
+                        </p>
+                    </li>
+
+
+                    <li class="list-order">
+                        <p class="text-list">
+                            <span class="text-centen">接单日期：<span class="text-info">{{prod.jdrq | formatDate}}</span></span>
+                            <span class="text-centen">客户类型：<span class="text-info" v-text="prod.khlx"></span></span>
+
+                        </p>
+
+                        <p class="text-list">
+
+                            <span class="text-centen">数量：<span class="text-info" v-text="prod.sl"></span></span>
+                            <span class="text-centen">合计金额：<span class="text-info" v-text="prod.zje"></span></span>
+                        </p>
+
+
+
+                    </li>
+
+                    <li class="list-order">
+
+                        <p class="text-list">
+                            <span class="text-centen">到款银行：<span class="text-info" v-text="prod.dkyh"></span></span>
+                            <span class="text-centen">到款金额：<span class="text-info" v-text="prod.dkje"></span></span>
+
+                        </p>
+                        <!--<p class="text-list">-->
+                            <!--<span class="text-centen">财务审核日期：<span class="text-info" >{{prod.cwshrq | formatDate}}</span></span>-->
+
+                        <!--</p>-->
+
+
+                    </li>
+
+                    <li class="list-order">
+                        <p class="text-list">
+
+                            <span class="text-centen">财务到款日期：<span class="text-info" >{{prod.cwdkrq | formatDate}}</span></span>
+                            <span class="text-centen">审核日期：<span class="text-info" >{{prod.ddshrq | formatDate}}</span></span>
+                        </p>
+                        <p class="text-list">
+                        </p>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </a>
+
+
+    </div>
+    <p class="foor-line">没有更多内容</p>
+</div>
+
+<!--定单工序-->
+<section class="cen-main" id="procesOrd" style="display: none">
+
+    <!--<span class="iconfont icon-guanbi-copy search-return" id="cDesc" ></span>-->
+    <img class="progress-img" src="../../images/progressImg.png" alt="">
+
+    <div class="progress-cenve">
+
+        <div class="progress-list">
+            <!--<div class="carrier-row porg-title">-->
+            <!--<span class="porg-text" v-text="prod.time">1</span>-->
+            <!--<span class="porg-text porg-no" v-text="prod.number">2</span>-->
+            <!--<span class="progress-btn iconfont icon-gengduo icon-fenleiliebiaobiaoji"  :class="{'icon-fenleiliebiaobiaoji':prod.shows}" @click="setToggle(prod,index)"></span>-->
+            <!--</div>-->
+            <!--:class="{'md-show':prod.delFlag}"-->
+            <div class="carrier-column process-list" >
+                <div class="pro-process" v-for="(prod,index) in prodData">
+                    <div  class="date-time"></div>
+                    <div class="out-line"></div>
+
+                    <!-- 9道工序 -->
+                    <div class="pro-cenve" >
+                        <p class="cess-type" v-text="prod.gpname"></p>
+                        <p class="cess-attach">
+                            <span class="cess-time" v-text="prod.Scantime"></span>
+                            <span class="cess-name">操作员：<span v-text="prod.ScanYG"></span>
+                                    </span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <p class="foor-line">没有更多内容</p>
+
+</section>
 <p class="foor-line">没有更多内容</p>
-<script src="../../script/require/require.js" data-main="../../script/order"></script>
+<script src="../../script/require/require.js" data-main="../../script/historyorder_main"></script>
 </body>
 </html>

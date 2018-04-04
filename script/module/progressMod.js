@@ -1,14 +1,19 @@
-define('progressMod',['zepto','vue'],function ($,Vue) {
+define('progressMod',['zepto','vue','api_config','sharedUi'],function ($,Vue,apiConfig,sharedUi) {
+    //历史订单按时间查询列表
 
     return {
 
         setDataProgress:function () {
+            var lsh = sharedUi.getQueryString('lsh');
+            var data = {
+                str_lsh:lsh
+            }
 
-            var httpUr = '../../simulateData/processList.json';
-            $.getJSON(httpUr,function (data) {
+            $.post(apiConfig.queryOrderWorkingProWechatCodeOrLshInfo,data,function (data) {
                 //全部产品列表
 
-                var prodData = data.process;
+                var prodData = JSON.parse(data);
+                console.log(prodData)
                 new Vue({
                     el:"#procesOrd",
                     data:{

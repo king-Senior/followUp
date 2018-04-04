@@ -285,6 +285,10 @@
  *
  **/
 /**
+ *   placeholder样式
+ *
+ **/
+/**
  *   阴影
  *
  *   @shadow 值
@@ -352,8 +356,8 @@ body {
   font-family: '微软雅黑';
   font-weight: normal;
   text-align: left;
-  line-height: 0.2rem;
-  margin-top: 0.24rem;
+  line-height: 0.3rem;
+  margin: 0.3rem 0;
 }
 .information .infor-list .icfor-title {
   font-size: 0.16rem;

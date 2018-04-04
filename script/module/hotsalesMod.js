@@ -1,10 +1,11 @@
-define('hotsalesMod',['zepto','vue','swiper-def'],function ($,Vue,mySwiper) {
-    return {
+define('hotsalesMod',['zepto','vue','swiper-def','api_config'],function ($,Vue,mySwiper,apiConfig) {
+    //热销产品
 
+    return {
         setDataAipHot:function () {
 
-            var httpUr = '../../simulateData/shuffling.json';
-            $.getJSON(httpUr,function (data) {
+
+            $.getJSON(apiConfig.ad_url,function (data) {
                 //首页轮播
 
                 var imgName = data.list;
@@ -30,19 +31,21 @@ define('hotsalesMod',['zepto','vue','swiper-def'],function ($,Vue,mySwiper) {
                 //首页广告切换
                 mySwiper.setSwiper();
 
-
             });
 
-            var prodUrl = '../../simulateData/products-list.json';
-            $.getJSON(prodUrl,function (data) {
-                //全部产品列表
 
-                var prodData = data.prodlist;
-                new Vue({
+            $.getJSON(apiConfig.queryHotSaleList,function (data) {
+                //热销产品列表
+                var prodData = data;
+                var hotsale = new Vue({
                     el:"#produListHot",
                     data:{
 
-                        prodData:prodData
+                        prodData:prodData,
+                        imgUrlHttp:apiConfig.imgUrlHttp
+                    },
+                    mounted:function(){
+                        this.setAaim();
                     },
                     methods:{
 
@@ -50,6 +53,7 @@ define('hotsalesMod',['zepto','vue','swiper-def'],function ($,Vue,mySwiper) {
                             var collectInt;
 
                             if(typeof item.collectors == "undefined") {
+                                //收藏功能
 
                                 //如果 item.collectors 不存在，就给全局添加item.collectors变量为true
 
@@ -70,10 +74,25 @@ define('hotsalesMod',['zepto','vue','swiper-def'],function ($,Vue,mySwiper) {
                             }
                             item.collect = collectInt;
 
+                        },
+                        setAaim:function () {
+                            //逐渐加载数据
+
                         }
                     }
 
                 })
+
+                var carrier_row = $(".carrier-row");
+
+                $.each(carrier_row,function (index,value) {
+                    //循环
+
+                    var rowindex = (index+1) / 5;
+                    carrier_row.eq(index).css({animation:"row "+ rowindex + "s linear;"});
+                })
+
+
 
             });
 

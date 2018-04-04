@@ -437,6 +437,35 @@
   right: 0;
   margin: 0 auto;
 }
+.carrier-row {
+  padding: 0 10px;
+}
+.order-list {
+  font-size: 0.12rem;
+  color: #999999;
+  font-family: '微软雅黑';
+  font-weight: normal;
+  text-align: left;
+  line-height: 0.3rem;
+  width: 100%;
+}
+.order-list .list-order {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.order-list .list-order .text-list {
+  display: -webkit-flex;
+  display: flex;
+}
+.order-list .list-order .text-list .text-centen {
+  -webkit-flex: 1;
+  flex: 1;
+}
+.order-list .list-order .text-list .text-centen .text-info {
+  color: #404040;
+}
+.order-list .order-no {
+  border: none;
+}
 ::-webkit-input-placeholder {
   /* WebKit browsers */
   font-size: 0.15rem;
@@ -456,4 +485,28 @@
   /* Internet Explorer 10+ */
   font-size: 0.15rem;
   color: #999999;
+}
+#procesOrd,
+#ddataWeixOrder {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  background: #fff;
+  overflow-y: auto;
+}
+#procesOrd {
+  z-index: 99 !important;
+}
+#cDesc {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  padding: 8px;
+  font-size: 0.2rem;
+  color: #fff;
+  opacity: .6;
 }

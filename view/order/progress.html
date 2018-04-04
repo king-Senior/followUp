@@ -20,24 +20,24 @@
 
         <div class="progress-cenve">
 
-            <div class="progress-list" v-for="(prod,index) in prodData">
-                <div class="carrier-row porg-title">
-                    <span class="porg-text" v-text="prod.time"></span>
-                    <span class="porg-text porg-no" v-text="prod.number"></span>
-                    <span class="progress-btn iconfont icon-gengduo icon-fenleiliebiaobiaoji"  :class="{'icon-fenleiliebiaobiaoji':prod.shows}" @click="setToggle(prod,index)"></span>
-                </div>
-                    <div class="carrier-column process-list" :class="{'md-show':prod.delFlag}">
-
-                        <div class="pro-process" v-for="nine in prod.nineprogram">
-
+            <div class="progress-list">
+                <!--<div class="carrier-row porg-title">-->
+                    <!--<span class="porg-text" v-text="prod.time">1</span>-->
+                    <!--<span class="porg-text porg-no" v-text="prod.number">2</span>-->
+                    <!--<span class="progress-btn iconfont icon-gengduo icon-fenleiliebiaobiaoji"  :class="{'icon-fenleiliebiaobiaoji':prod.shows}" @click="setToggle(prod,index)"></span>-->
+                <!--</div>-->
+                <!--:class="{'md-show':prod.delFlag}"-->
+                    <div class="carrier-column process-list" >
+                        <div class="pro-process" v-for="(prod,index) in prodData">
+                            <div  class="date-time"></div>
                             <div class="out-line"></div>
 
                             <!-- 9道工序 -->
-                            <div class="pro-cenve">
-                                <p class="cess-type" v-text="nine.type"></p>
+                            <div class="pro-cenve" >
+                                <p class="cess-type" v-text="prod.gpname"></p>
                                 <p class="cess-attach">
-                                    <span class="cess-time" v-text="nine.time"></span>
-                                    <span class="cess-name">操作员：<span v-text="nine.name">张贤忠</span>
+                                    <span class="cess-time" v-text="prod.Scantime"></span>
+                                    <span class="cess-name">操作员：<span v-text="prod.ScanYG"></span>
                                     </span>
                                 </p>
                             </div>
@@ -52,6 +52,6 @@
         <p class="foor-line">没有更多内容</p>
 
     </section>
-    <script src="../../script/require/require.js" data-main="../../script/progress"></script>
+    <script src="../../script/require/require.js" data-main="../../script/porgress_main"></script>
 </body>
 </html>

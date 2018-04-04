@@ -27,7 +27,7 @@
                   <a href="../searchlist/ordernumber.html" class="search menu-aLink">
                       <div class="search-so">
                           <span class="iconfont icon-sousuo search-hsousuo"></span>
-                          <p class="search-hsousuo-text">输入订单号查询</p>
+                          <p class="search-hsousuo-text">输入产品</p>
                       </div>
                   </a>
                   <div class="scrllTop-color"></div>
@@ -73,29 +73,30 @@
                 </a>
             </div>
 
+
         </div>
 
         <div class="cenv-title">
             <p class="title-text">全部商品</p>
         </div>
 
+
         <!--产品列表-->
         <div id="prodListIn" class="carrier-list column-count">
             <div class="count-child" v-for="prod in prodData">
                 <div class="carrier-column" >
                     <div class="img-carrier">
-                        <img :src="prod.img" alt="">
-
+                        <img :src="imgUrlHttp+prod.img_url" alt="">
                     </div>
                     <div class="tuen-carrier">
                         <p class="pro-title" v-text="prod.title"></p>
-                        <p class="pro-text" v-text="prod.text"></p>
+                        <p class="pro-text" v-text="prod.remark"></p>
                         <div class="pro-atta">
-                            <p class="pro-sell">月销售：<span class="to-sell" v-text="prod.price"></span></p>
-                            <p class="pro-collect">
-                                <span class="iconfont icon-shoucang" :class="{'icon-shoucang1':prod.collectors,'collectorsRed':prod.collectors}" @click="setOllect(prod)"></span>
-                                <span class="collect-num" v-text="prod.collect"></span>
-                            </p>
+                            <!--<p class="pro-sell">月销售：<span class="to-sell" v-text="prod.price"></span></p>-->
+                            <!--<p class="pro-collect">-->
+                                <!--<span class="iconfont icon-shoucang" :class="{'icon-shoucang1':prod.collectors,'collectorsRed':prod.collectors}" @click="setOllect(prod)"></span>-->
+                                <!--<span class="collect-num" v-text="prod.collect"></span>-->
+                            <!--</p>-->
                         </div>
                     </div>
                 </div>
@@ -105,6 +106,9 @@
 
     </section>
     <p class="foor-line">没有更多内容</p>
-    <script src="../../script/require/require.js" data-main="../../script/index"></script>
+    <script src="../../script/require/require.js" data-main="../../script/index_main"></script>
+    <script>
+
+    </script>
 </body>
 </html>

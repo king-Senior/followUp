@@ -42,26 +42,28 @@
         <div id="produListHot" class="carrier-list">
             <div class="carrier-row" v-for="prod in prodData">
                 <div class="img-carrier">
-                    <img :src="prod.img" alt="">
+
+                    <img :src="imgUrlHttp+prod.img_url" alt="">
                 </div>
 
                 <div class="tuen-carrier">
                     <p class="pro-title" v-text="prod.title" ></p>
-                    <p class="pro-text" v-text="prod.text"></p>
+                    <p class="pro-text" v-text="prod.remark"></p>
                     <div class="pro-atta">
-                        <p class="pro-sell">月销售：<span class="to-sell" v-text="prod.price"></span></p>
-                        <p class="pro-collect">
-                            <span class="iconfont icon-shoucang" :class="{'icon-shoucang1':prod.collectors,'collectorsRed':prod.collectors}" @click="setOllect(prod)"></span>
-                            <span class="collect-num" v-text="prod.collect"></span>
-                        </p>
+                        <!--<p class="pro-sell">月销售：<span class="to-sell" v-text="prod.price"></span></p>-->
+                        <!--<p class="pro-collect">-->
+                            <!--<span class="iconfont icon-shoucang" :class="{'icon-shoucang1':prod.collectors,'collectorsRed':prod.collectors}" @click="setOllect(prod)"></span>-->
+                            <!--<span class="collect-num" v-text="prod.collect"></span>-->
+                        <!--</p>-->
                     </div>
                 </div>
             </div>
         </div>
 
     </section>
+    <div id="loading" class="loading"><span class="loading-an"></span></div>
     <p class="foor-line">没有更多内容</p>
-    <script src="../../script/require/require.js" data-main="../../script/hotsales"></script>
+    <script src="../../script/require/require.js" data-main="../../script/hotsales_main"></script>
 
 </body>
 </html>

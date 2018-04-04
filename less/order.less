@@ -78,7 +78,38 @@
 
   }
 }
+.carrier-row {
+  padding:0 10px;
+}
 
+.order-list {
+  .font(0.12rem,#999);
+  line-height: 0.3rem;
+  width:100%;
+
+  .list-order {
+    //padding: 0.1rem 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+
+    .text-list {
+      .display(flex);
+
+      .text-centen {
+        .flex();
+        
+        .text-info {
+          color: #404040;
+        }
+      }
+    }
+  }
+
+  .order-no {
+
+    border:none;
+    //text-align: right;
+  }
+}
 
 
 ::-webkit-input-placeholder { /* WebKit browsers */
@@ -99,5 +130,32 @@
   font-size:0.15rem;
   color: @color-999;
 
+}
+#procesOrd,
+#ddataWeixOrder {
+
+  position: fixed;
+  height: 100%;
+  width:100%;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  background: #fff;
+  overflow-y: auto;
+
+}
+#procesOrd {
+  z-index: 99 !important;
+}
+
+#cDesc {
+  position: absolute;
+  right:0;
+  top:0;
+  display: block;
+  padding:8px;
+  font-size: 0.2rem;
+  color: #fff;
+  opacity: .6;
 }
 

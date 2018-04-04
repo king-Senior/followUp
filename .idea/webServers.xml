@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4d229956-c9af-4c43-9713-1ed225424dee" name="followup" url="http://localhost:8057">
+        <fileTransfer port="0" mountedRoot="F:\Tiw\dataFollowUp\followUp" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

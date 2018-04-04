@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>测试</title>
+    <script src="../../script/zepto.min.js"></script>
+</head>
+<body>
+
+        <p>code:----- <span id="codeM"></span><br />
+            <span id="codeMc"></span>
+        </p>
+        <p>获取的code:-----
+            <span id="codeMcc"></span><br />
+
+        </p>
+        <p>传入的tonke:    <span id="tonkeS"></span></p>
+        <p>传入的opId:    <span id="opId"></span></p>
+
+        <p>用户信息：<span id="userIC"></span></p>
+        <script>
+
+            $(function () {
+
+
+
+                function getQueryString(name) {
+
+                    //获取url参数   name 指定的参数
+                    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                    var r = window.location.search.substr(1).match(reg);
+                    if (r != null) return unescape(r[2]);
+                    return null;
+                }
+
+
+
+                var code = getQueryString("code");
+                $("#codeMcc").html(code);
+
+
+                var appid = "wx6d0770da1adbde30";
+                var secret = "63f6791a787d2595ed6785091c46280a";
+
+                var urlsp = '/admin/webservice/WebService.asmx';
+
+                //微信token
+                var weiXinToken = urlsp + '/getWeChatOauthInfo';
+                var data = {
+                    code:code,
+                    appid:appid,
+                    secret:secret
+
+                }
+                $.get(weiXinToken,data,function (data) {
+
+                    alert(appid+ "------" +secret)
+
+                    //var c = data.JSON.parse(data);
+
+                    var cb = data.split('"');
+
+                    var token =  cb[3];
+                    var openid = cb[13];
+
+                    $("#codeM").html(data);
+
+
+                    $("#tonkeS").html(token);
+                    $("#opId").html(openid);
+
+                    var user = urlsp + "/getWeChatUserInfo";
+
+                    var data = {
+                        access_token:token,
+                        openid:openid
+                    }
+
+                    $.get(user,data,function (data) {
+                        $("#userIC").html(data)
+                    })
+
+                })
+
+
+
+
+
+
+
+
+            })
+
+        </script>
+</body>
+</html>

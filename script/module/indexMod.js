@@ -1,11 +1,11 @@
-define('indexMod',['zepto','vue','swiper-def'],function ($,Vue,mySwiper) {
+define('indexMod',['zepto','vue','swiper-def','api_config'],function ($,Vue,mySwiper,apiConfig) {
+    //产品介绍
 
     return {
 
         setDataApi:function () {
 
-            var httpUr = '../../simulateData/shuffling.json';
-            $.getJSON(httpUr,function (data) {
+            $.getJSON(apiConfig.ad_url,function (data) {
                 //首页轮播
 
                 var imgName = data.list;
@@ -32,24 +32,22 @@ define('indexMod',['zepto','vue','swiper-def'],function ($,Vue,mySwiper) {
                 //首页广告切换
                 mySwiper.setSwiper();
 
-
             });
 
-            var prodUrl = '../../simulateData/products-list.json';
-            $.getJSON(prodUrl,function (data) {
+            $.get(apiConfig.queryProductIntroductionList,function (data) {
                 //全部产品列表
 
-                var prodData = data.prodlist;
+                var prodData = JSON.parse(data);
                 new Vue({
                     el:"#prodListIn",
                     data:{
-                        prodData:prodData
+                        prodData:prodData,
+                        imgUrlHttp:apiConfig.imgUrlHttp
                         //ollName:true,
                         //escollname:false,
                         //modName:2
                     },
                     methods:{
-
                         setOllect:function (item) {
                             var collectInt;
 
@@ -81,18 +79,7 @@ define('indexMod',['zepto','vue','swiper-def'],function ($,Vue,mySwiper) {
 
             });
 
-        },
-        setUiCollect:function () {
-            //UI层
-
-
-
-
         }
     };
-
-
-
-
 
 });

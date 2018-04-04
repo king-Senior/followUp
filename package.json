@@ -1,0 +1,21 @@
+{
+  "name": "followup.2.0",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+
+    "package":"node ./script/r.js -o ./script/require_config.js"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/king-Senior/followUp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/king-Senior/followUp/issues"
+  },
+  "homepage": "https://github.com/king-Senior/followUp#readme",
+  "description": ""
+}
